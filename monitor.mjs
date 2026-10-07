@@ -7,6 +7,7 @@ const TIMEOUT_MS = 15000;      // espera máxima por web
 const SLOW_MS = 5000;          // "lenta" (solo informativo, no manda mail)
 const CONFIRM_FAILS = 2;       // chequeos fallidos seguidos para dar la alerta
 const RETRY_WAIT_MS = 10000;   // espera antes del reintento dentro del mismo chequeo
+const HIST_LEN = 48;           // chequeos que se guardan para el historial del dashboard
 const STATE_FILE = process.env.STATE_FILE || 'state.json';
 const TZ = 'America/Argentina/Buenos_Aires';
 const DRY_RUN = process.env.DRY_RUN === '1';
@@ -130,7 +131,6 @@ async function sendMail({ subject, html, text }) {
 async function main() {
   const sites = loadSites();
   const state = loadState();
-  const before = JSON.stringify(state);
   const now = Date.now();
 
   const results = await Promise.all(sites.map(async s => ({ site: s, res: await check(s) })));
@@ -143,7 +143,10 @@ async function main() {
 
   const downs = [], ups = [];
   for (const { site, res } of results) {
-    const st = state[site.id] || { status: 'unknown', fails: 0, since: null, firstFail: null, lastOk: null, reason: null };
+    const st = state[site.id] || { status: 'unknown', fails: 0, since: null, firstFail: null, lastOk: null, reason: null, hist: [] };
+    st.name = site.name; st.url = site.url;
+    st.ms = res.ms; st.checkedAt = now; st.lastResult = res.state;
+    st.hist = [...(st.hist || []), res.state].slice(-HIST_LEN);
     if (res.state === 'down') {
       st.fails += 1;
       if (st.fails === 1) st.firstFail = now;
@@ -169,10 +172,11 @@ async function main() {
 
   // Limpiar sitios que ya no están en la lista
   const ids = new Set(sites.map(s => s.id));
-  for (const k of Object.keys(state)) if (!ids.has(k)) delete state[k];
+  for (const k of Object.keys(state)) if (!k.startsWith('_') && !ids.has(k)) delete state[k];
 
-  const after = JSON.stringify(state);
-  if (after !== before) fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + '\n');
+  // El estado se guarda siempre: el dashboard lo lee y usa _updatedAt para saber si el monitor sigue activo.
+  state._updatedAt = now;
+  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 1) + '\n');
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
