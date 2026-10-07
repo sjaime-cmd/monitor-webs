@@ -4,7 +4,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s02": {
@@ -12,7 +12,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s03": {
@@ -20,7 +20,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s04": {
@@ -28,7 +28,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s05": {
@@ -36,7 +36,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s06": {
@@ -44,7 +44,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s07": {
@@ -52,7 +52,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s08": {
@@ -60,7 +60,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s09": {
@@ -68,7 +68,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s10": {
@@ -76,7 +76,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s11": {
@@ -84,15 +84,15 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s12": {
-    "status": "up",
+    "status": "slow",
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s13": {
@@ -100,7 +100,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s14": {
@@ -108,7 +108,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s15": {
@@ -116,7 +116,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s16": {
@@ -124,7 +124,7 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s17": {
@@ -132,15 +132,15 @@
     "fails": 0,
     "since": null,
     "firstFail": null,
-    "lastOk": 1791396606102,
+    "lastOk": 1791396822357,
     "reason": null
   },
   "s18": {
-    "status": "down",
-    "fails": 2,
-    "since": 1791396576813,
-    "firstFail": 1791396576813,
-    "lastOk": 1791396367424,
-    "reason": "El dominio no se resuelve (problema de DNS o dominio vencido)"
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396822357,
+    "reason": null
   }
 }
