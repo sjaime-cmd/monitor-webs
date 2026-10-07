@@ -1,146 +1,291 @@
 {
-  "s01": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s02": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s03": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s04": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s05": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s06": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s07": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s08": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s09": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s10": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s11": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s12": {
-    "status": "slow",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s13": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s14": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s15": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s16": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s17": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  },
-  "s18": {
-    "status": "up",
-    "fails": 0,
-    "since": null,
-    "firstFail": null,
-    "lastOk": 1791396822357,
-    "reason": null
-  }
+ "s01": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "The Pink Stuff",
+  "url": "https://www.mercadolibre.com.ar/pagina/slxrzu1d",
+  "ms": 774,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s02": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Helados Chungo",
+  "url": "https://www.chungo.com.ar/home/",
+  "ms": 614,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s03": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "American Vart",
+  "url": "https://www.americanvart.com.ar/",
+  "ms": 3988,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s04": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Titanika",
+  "url": "https://titanika.com.ar/",
+  "ms": 682,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s05": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Posto",
+  "url": "https://posto5.com.ar/",
+  "ms": 755,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s06": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Magic",
+  "url": "https://magicstore.com.ar/",
+  "ms": 1910,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s07": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Treina",
+  "url": "https://treina.com.ar/",
+  "ms": 1152,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s08": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Arcana",
+  "url": "https://arcanaspirits.com.ar/",
+  "ms": 1191,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s09": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Naturgy",
+  "url": "https://www.naturgyerbamate.com/",
+  "ms": 1441,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s10": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Sol y Oro",
+  "url": "https://www.solyoro.com.ar/",
+  "ms": 1652,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s11": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Hanes",
+  "url": "https://www.hanes.ar/",
+  "ms": 1639,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s12": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Mnet",
+  "url": "https://www.mayoristanet.com/",
+  "ms": 4269,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s13": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "921",
+  "url": "https://www.921.com.ar/",
+  "ms": 1909,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s14": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Kerasys",
+  "url": "https://kerasysargentina.com/",
+  "ms": 1939,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s15": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Siroppo",
+  "url": "https://siroppo.com.ar/",
+  "ms": 2745,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s16": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "Suavinex",
+  "url": "https://www.suavinex.com.ar/",
+  "ms": 2678,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s17": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "SkinScience",
+  "url": "https://shop.leisamolinari.com/",
+  "ms": 2365,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "s18": {
+  "status": "up",
+  "fails": 0,
+  "since": null,
+  "firstFail": null,
+  "lastOk": 1791397778003,
+  "reason": null,
+  "name": "CMP",
+  "url": "https://centromedicodelapiel.com.ar/",
+  "ms": 3186,
+  "checkedAt": 1791397778003,
+  "lastResult": "up",
+  "hist": [
+   "up"
+  ]
+ },
+ "_updatedAt": 1791397778003
 }
