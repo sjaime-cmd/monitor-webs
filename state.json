@@ -1,1 +1,146 @@
-{}
+{
+  "s01": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s02": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s03": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s04": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s05": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s06": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s07": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s08": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s09": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s10": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s11": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s12": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s13": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s14": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s15": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s16": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s17": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  },
+  "s18": {
+    "status": "up",
+    "fails": 0,
+    "since": null,
+    "firstFail": null,
+    "lastOk": 1791396367424,
+    "reason": null
+  }
+}
