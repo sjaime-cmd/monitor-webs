@@ -7,6 +7,7 @@ const TIMEOUT_MS = 15000;      // espera máxima por web
 const SLOW_MS = 5000;          // "lenta" (solo informativo, no manda mail)
 const CONFIRM_FAILS = 2;       // chequeos fallidos seguidos para dar la alerta
 const RETRY_WAIT_MS = 10000;   // espera antes del reintento dentro del mismo chequeo
+const MIN_GAP_MS = 120000;     // evita chequeos duplicados si dos disparadores coinciden
 const HIST_LEN = 48;           // chequeos que se guardan para el historial del dashboard
 const STATE_FILE = process.env.STATE_FILE || 'state.json';
 const TZ = 'America/Argentina/Buenos_Aires';
@@ -35,6 +36,12 @@ function loadState() {
   try { return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8')); } catch { return {}; }
 }
 
+function isReset(e) {
+  const code = e?.cause?.code || e?.code || '';
+  const msg = `${e?.cause?.message || ''} ${e?.message || ''}`;
+  return ['ECONNRESET', 'UND_ERR_SOCKET'].includes(code) || /other side closed|socket hang up|terminated/i.test(msg);
+}
+
 function explainError(e) {
   if (e?.name === 'AbortError') return `No respondió en ${TIMEOUT_MS / 1000} segundos (timeout)`;
   const code = e?.cause?.code || e?.code || '';
@@ -58,12 +65,14 @@ async function probe(url) {
     try { await r.body?.cancel(); } catch {}
     return { reached: true, status: r.status, ms, finalUrl: r.url };
   } catch (e) {
-    return { reached: false, ms: Date.now() - t0, error: explainError(e) };
+    return { reached: false, ms: Date.now() - t0, error: explainError(e), reset: isReset(e) };
   } finally { clearTimeout(timer); }
 }
 
 // down | slow | up  (+ motivo)
-function classify(r) {
+function classify(r, site = {}) {
+  // Sitios con "ignoreReset": el servidor corta las conexiones del monitor aunque la web funcione para las personas.
+  if (!r.reached && r.reset && site.ignoreReset) return { state: 'up', status: 0, note: 'El servidor corta la conexión del monitor (se ignora)' };
   if (!r.reached) return { state: 'down', reason: r.error };
   const s = r.status;
   if (s >= 500) return { state: 'down', reason: `Error del servidor (HTTP ${s})`, status: s };
@@ -75,11 +84,11 @@ function classify(r) {
 
 async function check(site) {
   let r = await probe(site.url);
-  let c = classify(r);
+  let c = classify(r, site);
   if (c.state === 'down') {            // reintento antes de contar la falla
     await sleep(RETRY_WAIT_MS);
     r = await probe(site.url);
-    c = classify(r);
+    c = classify(r, site);
   }
   return { ...c, ms: r.ms, finalUrl: r.finalUrl };
 }
@@ -100,9 +109,9 @@ function downMail(items) {
     ${row('Problema', `<b style="color:#EF4444">${esc(i.reason)}</b>`)}
     ${row('Primera falla', fmtDate(i.since))}
     ${row('Último OK', i.lastOk ? fmtDate(i.lastOk) : 'sin registro')}
-    ${row('Fallas seguidas', `${i.fails} chequeos (cada 5 min)`)}
+    ${row('Fallas seguidas', `${i.fails} chequeos seguidos`)}
   </table></div>`).join('');
-  const html = mailShell(n === 1 ? 'Web caída' : `${n} webs caídas`, '#EF4444', blocks, 'Aviso automático del monitor de Rotundo. Recibirás otro mail cuando la web vuelva a responder.');
+  const html = mailShell(n === 1 ? 'Web caída' : `${n} webs caídas`, '#EF4444', blocks, 'Aviso automático del monitor de Rotundo. Si la web abre normal desde tu computadora, puede ser que su servidor esté bloqueando al monitor. Recibirás otro mail cuando vuelva a responder.');
   const text = items.map(i => `${i.site.name} (${i.site.url})\n  Problema: ${i.reason}\n  Primera falla: ${fmtDate(i.since)}\n  Último OK: ${i.lastOk ? fmtDate(i.lastOk) : 'sin registro'}`).join('\n\n');
   return { subject, html, text };
 }
@@ -132,6 +141,10 @@ async function main() {
   const sites = loadSites();
   const state = loadState();
   const now = Date.now();
+  if (state._updatedAt && now - state._updatedAt < MIN_GAP_MS && process.env.FORCE !== '1') {
+    console.log('Hubo un chequeo hace menos de 2 minutos. Se omite este.');
+    return;
+  }
 
   const results = await Promise.all(sites.map(async s => ({ site: s, res: await check(s) })));
 
